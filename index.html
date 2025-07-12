@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejador de Viagem Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>✈️ Planejador de Viagem Inteligente 🎒</h1>
+        <p>Use o poder dos algoritmos para fazer a mala perfeita!</p>
+    </header>
+
+    <main>
+        <div class="controls-container">
+            <section class="card">
+                <h2>1. Configure sua Mochila</h2>
+                <label for="capacity">Capacidade Máxima de Peso (kg):</label>
+                <input type="number" id="capacity" value="15" min="1">
+            </section>
+
+            <section class="card">
+                <h2>2. Adicione seus Itens</h2>
+                <form id="item-form">
+                    <input type="text" id="item-name" placeholder="Nome do Item" required>
+                    <input type="number" id="item-weight" placeholder="Peso (kg)" min="0.1" step="0.1" required>
+                    <input type="number" id="item-value" placeholder="Valor (utilidade de 1 a 100)" min="1" required>
+                    
+                    <select id="item-icon">
+                        <optgroup label="Eletrônicos">
+                            <option value="💻">💻 Notebook</option>
+                            <option value="📱">📱 Celular</option>
+                            <option value="📸">📸 Câmera</option>
+                            <option value="🎧">🎧 Fone de Ouvido</option>
+                            <option value="🔌">🔌 Carregador</option>
+                            <option value="🔋">🔋 Power Bank</option>
+                        </optgroup>
+                        <optgroup label="Roupas e Acessórios">
+                            <option value="👕">👕 Camiseta</option>
+                            <option value="👖">👖 Calça</option>
+                            <option value="👗">👗 Vestido</option>
+                            <option value="🩳">🩳 Shorts</option>
+                            <option value="👟">👟 Tênis</option>
+                            <option value="🥾">🥾 Bota</option>
+                            <option value="👒">👒 Chapéu</option>
+                            <option value="🕶️">🕶️ Óculos de Sol</option>
+                            <option value="⌚">⌚ Relógio</option>
+                        </optgroup>
+                        <optgroup label="Higiene e Saúde">
+                            <option value="💊">💊 Remédios</option>
+                            <option value="🧴">🧴 Protetor Solar</option>
+                            <option value="🪥">🪥 Escova de Dentes</option>
+                            <option value="🧼">🧼 Sabonete</option>
+                        </optgroup>
+                        <optgroup label="Documentos e Dinheiro">
+                            <option value="💳">💳 Cartão de Crédito</option>
+                            <option value="💵">💵 Dinheiro</option>
+                            <option value="Passport">🛂 Passaporte</option>
+                            <option value="📄">📄 Documentos</option>
+                        </optgroup>
+                         <optgroup label="Comida e Bebida">
+                            <option value="💧">💧 Garrafa d'água</option>
+                            <option value="🍫">🍫 Chocolate</option>
+                            <option value="🍎">🍎 Fruta</option>
+                            <option value="🥪">🥪 Sanduíche</option>
+                        </optgroup>
+                        <optgroup label="Outros">
+                            <option value="📚">📚 Livro</option>
+                            <option value="🧭">🧭 Bússola</option>
+                            <option value="🗺️">🗺️ Mapa</option>
+                            <option value="🔑">🔑 Chaves</option>
+                            <option value="☂️">☂️ Guarda-chuva</option>
+                        </optgroup>
+                    </select>
+                    <button type="submit">Adicionar Item</button>
+                </form>
+            </section>
+            
+            <button id="optimize-button" class="cta-button">Otimizar Mochila!</button>
+        </div>
+
+        <div class="content-container">
+            <section class="card">
+                <h2>Itens Disponíveis</h2>
+                <div id="items-list" class="items-grid">
+                    <p class="empty-state">Nenhum item adicionado ainda...</p>
+                </div>
+            </section>
+
+            <section id="result-section" class="card" style="display: none;">
+                <h2>Resultado da Otimização</h2>
+                <div class="result-summary">
+                    <p><strong>Valor Máximo Total:</strong> <span id="max-value"></span></p>
+                    <p><strong>Peso Utilizado:</strong> <span id="total-weight"></span> kg</p>
+                </div>
+                <h3>Itens na Mochila:</h3>
+                <div id="selected-items" class="items-grid"></div>
+                <h3>Itens que Ficaram de Fora:</h3>
+                <div id="leftover-items" class="items-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Projeto de Algoritmos - Knapsack com Programação Dinâmica - <a href="https://github.com/rafgpereira">Rafael Pereira</a> e <a href="https://github.com/jlucasiqueira">João Lucas Araújo</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

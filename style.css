@@ -1,0 +1,184 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.controls-container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.content-container {
+    flex: 2;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #4a90e2;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 0.5rem;
+}
+
+
+input, select, button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    background-color: #50c878;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45b36b;
+}
+
+#item-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-button {
+    background-color: #f5a623;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.cta-button:hover {
+    background-color: #d8901a;
+}
+
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.item-card {
+    position: relative; 
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.item-card .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.item-card p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+.empty-state {
+    color: #888;
+    grid-column: 1 / -1; 
+    text-align: center;
+}
+
+
+.delete-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: none;
+    border: none;
+    color: #ff2d2d;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    transition: background-color 0.2s ease;
+    border-radius: 4px 4px 0px 0px;
+
+}
+
+.delete-btn:hover {
+    background-color: #bdbdbd;
+
+}
+
+
+
+#result-section {
+    border-left: 5px solid #50c878;
+}
+
+#result-section .item-card { 
+    padding-top: 1.5rem;
+}
+
+.result-summary {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #e1e8ed;
+    color: #555;
+    font-size: 0.9rem;
+}

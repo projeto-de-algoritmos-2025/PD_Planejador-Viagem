@@ -2,7 +2,7 @@
 # Planejador de Viagem
 
 **Número da Lista**: X<br>
-**Conteúdo da Disciplina**: Porgramação Dinâmica<br>
+**Conteúdo da Disciplina**: Programação Dinâmica<br>
 
 ## Alunos
 
@@ -43,6 +43,11 @@ Este projeto é o Planejador de Viagem Inteligente, uma aplicação web interati
 ---
 
 </center>
+
+
+## Vídeo da Apresentação
+
+[Assistir Apresentação](https://youtu.be/daKIC_K51Dc)
 
 ### Pré-requisitos
 
